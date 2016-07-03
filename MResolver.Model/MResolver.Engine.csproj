@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE0DB992-ABD3-420A-B67D-21962DE31281}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MResolver.Engine</RootNamespace>
+    <AssemblyName>MResolver.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL" />
+    <Reference Include="IronPython.Modules, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\IronPython 2.7\Platforms\Net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\IronPython 2.7\Platforms\Net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\IronPython 2.7\Platforms\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\BreakpointEventArgs.cs" />
+    <Compile Include="Engine\ModelParser\FormulaAstWalker.cs" />
+    <Compile Include="Engine\ModelParser\FormulaParseInfo.cs" />
+    <Compile Include="Engine\ModelParser\FormulaParser.cs" />
+    <Compile Include="Engine\ModelParser\FormulaErrorSink.cs" />
+    <Compile Include="Engine\ModelParser\FormulaError.cs" />
+    <Compile Include="Engine\ModelHost.cs" />
+    <Compile Include="Engine\ModelParser\ResolvedVariableSpan.cs" />
+    <Compile Include="Models\Formulas\Breakpoint.cs" />
+    <Compile Include="Models\Script.cs" />
+    <Compile Include="Models\Sets\DerivedSet_T1_T2_T3_T4.cs" />
+    <Compile Include="Models\IModelElement.cs" />
+    <Compile Include="Models\Sets\IModelSet.cs" />
+    <Compile Include="Models\Sets\PrimitiveSet.cs" />
+    <Compile Include="Models\Tuple\AllKeys.cs" />
+    <Compile Include="Models\Tuple\TupleKey.cs" />
+    <Compile Include="Models\Tuple\TupleKey_T1_T2_T3_T4.cs" />
+    <Compile Include="Models\Tuple\TupleKey_T1_T2_T3.cs" />
+    <Compile Include="Models\Tuple\TupleKey_T1_T2.cs" />
+    <Compile Include="Models\Util\ModelElementDictionary.cs" />
+    <Compile Include="Models\Util\SetBuilder.cs" />
+    <Compile Include="Models\Util\VariableBuilder.cs" />
+    <Compile Include="Models\Variables\IModelVariable.cs" />
+    <Compile Include="Models\Variables\ValueInfo.cs" />
+    <Compile Include="Models\Variables\VariableType.cs" />
+    <Compile Include="Models\Variables\DecimalVariable_T1.cs" />
+    <Compile Include="Models\Variables\DecimalVariable_T1_T2.cs" />
+    <Compile Include="Models\Variables\DecimalVariable_T1_T2_T3.cs" />
+    <Compile Include="Models\Variables\DecimalVariable_T1_T2_T3_T4.cs" />
+    <Compile Include="Engine\IModelEngine.cs" />
+    <Compile Include="TEST.cs" />
+    <Compile Include="Models\Formulas\Formula.cs" />
+    <Compile Include="Models\Sets\IndexType.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Sets\DerivedSet_T1_T2.cs" />
+    <Compile Include="Models\Sets\DerivedSet_T1_T2_T3.cs" />
+    <Compile Include="Models\Sets\Set.cs" />
+    <Compile Include="Models\Sets\SetType.cs" />
+    <Compile Include="Models\Util\SetUtility.cs" />
+    <Compile Include="Models\Variables\Variable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Models\Models.cd" />
+    <None Include="Engine\ModelParser\Parser.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

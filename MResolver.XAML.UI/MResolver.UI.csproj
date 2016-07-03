@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9D48749-B607-4F9A-B812-321842234314}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MResolver.UI</RootNamespace>
+    <AssemblyName>MResolver.XAML.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.2.0.2\lib\net45\Caliburn.Micro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.2.0.2\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gemini, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeminiWpf.0.6.2\lib\net45\Gemini.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.0.0.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.0.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2013, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeminiWpf.0.6.2\lib\net45\Xceed.Wpf.AvalonDock.Themes.VS2013.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CodeEditor\Breakpoint2.cs" />
+    <Compile Include="CodeEditor\ICSharpCode\ITextMarker.cs" />
+    <Compile Include="CodeEditor\Breakpoint.cs" />
+    <Compile Include="CodeEditor\ResolverCodeEditor.cs" />
+    <Compile Include="DesignerModule\DesignerModule.cs" />
+    <Compile Include="CodeEditor\ICSharpCode\BookmarkBase.cs" />
+    <Compile Include="CodeEditor\ICSharpCode\IBookmarkMargin.cs" />
+    <Compile Include="CodeEditor\ICSharpCode\IconBarManager.cs" />
+    <Compile Include="CodeEditor\ICSharpCode\IconBarMargin.cs" />
+    <Compile Include="CodeEditor\TextMarkerService.cs" />
+    <Compile Include="Util\Converters\Boolean2ObjectConverter.cs" />
+    <Compile Include="Util\Converters\Boolean2VisibilityConverter.cs" />
+    <Compile Include="Util\Converters\Nullable2ObjectConverter.cs" />
+    <Compile Include="Util\Converters\TreeNodeLevel2LeadingConverter.cs" />
+    <Compile Include="DesignerModule\ViewModels\ModelTreeViewModel.cs" />
+    <Compile Include="DesignerModule\Views\FormulaView.xaml.cs">
+      <DependentUpon>FormulaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerModule\Views\ModelTreeView.xaml.cs">
+      <DependentUpon>ModelTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerModule\Views\ScriptView.xaml.cs">
+      <DependentUpon>ScriptView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerModule\Views\SetView.xaml.cs">
+      <DependentUpon>SetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerModule\Views\VariableView.xaml.cs">
+      <DependentUpon>VariableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="DesignerModule\Views\FormulaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignerModule\Views\ModelTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignerModule\Views\ScriptView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignerModule\Views\SetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignerModule\Views\VariableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test\TestModel.cs" />
+    <Compile Include="DesignerModule\ViewModels\FormulaViewModel.cs" />
+    <Compile Include="DesignerModule\ViewModels\NodeViewModel.cs" />
+    <Compile Include="DesignerModule\ViewModels\ScriptViewModel.cs" />
+    <Compile Include="DesignerModule\ViewModels\SetViewModel.cs" />
+    <Compile Include="DesignerModule\ViewModels\VariableViewModel.cs" />
+    <Compile Include="Util\BaseViewModel.cs" />
+    <Compile Include="Util\ResourceImage.cs" />
+    <Compile Include="Util\RelayCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CodeEditor\ICSharpCode\ClassDiagram1.cd" />
+    <None Include="Icons\Bookmarks\Bookmarks.pdn" />
+    <None Include="Icons\Bookmarks\Breakpoint.pdn" />
+    <EmbeddedResource Include="CodeEditor\Python.xshd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\ScriptLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\Script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\Variable_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\Variable_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\Formula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\Set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\icon.folder.dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AvalonEdit-master\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
+      <Project>{6c55b776-26d4-4db3-a6ab-87e783b2f3d1}</Project>
+      <Name>ICSharpCode.AvalonEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MResolver.Model\MResolver.Engine.csproj">
+      <Project>{ce0db992-abd3-420a-b67d-21962de31281}</Project>
+      <Name>MResolver.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Designer\OpenDoc_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Bookmarks\Breakpoint.png" />
+    <Resource Include="Icons\Bookmarks\BreakpointConditional.png" />
+    <Resource Include="Icons\Bookmarks\ClearAll.png" />
+    <Resource Include="Icons\Bookmarks\CurrentLine.png" />
+    <Resource Include="Icons\Bookmarks\DeleteAllBreakpoints.PNG" />
+    <Resource Include="Icons\Bookmarks\DeleteAllMarks.png" />
+    <Resource Include="Icons\Bookmarks\DeleteMark.png" />
+    <Resource Include="Icons\Bookmarks\DisableAllBreakpoints.PNG" />
+    <Resource Include="Icons\Bookmarks\DisabledBreakpoint.png" />
+    <Resource Include="Icons\Bookmarks\EnableDisableAll.png" />
+    <Resource Include="Icons\Bookmarks\EnableDisableMark.png" />
+    <Resource Include="Icons\Bookmarks\GotoNext.png" />
+    <Resource Include="Icons\Bookmarks\GotoNextInFile.png" />
+    <Resource Include="Icons\Bookmarks\GotoNextInFolder.png" />
+    <Resource Include="Icons\Bookmarks\GotoPrev.png" />
+    <Resource Include="Icons\Bookmarks\GotoPrevInFile.png" />
+    <Resource Include="Icons\Bookmarks\GotoPrevInFolder.png" />
+    <Resource Include="Icons\Bookmarks\NextBreakpoint.png" />
+    <Resource Include="Icons\Bookmarks\Pin.png" />
+    <Resource Include="Icons\Bookmarks\PrevBreakpoint.png" />
+    <Resource Include="Icons\Bookmarks\ToggleMark.png" />
+    <Resource Include="Icons\Bookmarks\UnhealthyBreakpoint.png" />
+    <Resource Include="Icons\Bookmarks\UnhealthyBreakpointConditional.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

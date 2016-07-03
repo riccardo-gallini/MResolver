@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="MResolver.Engine.ModelParser.FormulaAstWalker">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="MResolver.Engine.ModelParser.FormulaAstWalker.AssignmentLocation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\ModelParser\FormulaAstWalker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="info" Type="MResolver.Engine.ModelParser.FormulaParseInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="0.812" />
+        <Point X="3.875" Y="0.812" />
+        <Point X="3.875" Y="1.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ModelParser\FormulaAstWalker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="info" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MResolver.Engine.ModelParser.FormulaError">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAEAAACAAACAAAAAAAIAAAAAAAAASA=</HashCode>
+      <FileName>Engine\ModelParser\FormulaError.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="location" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MResolver.Engine.ModelParser.FormulaErrorSink">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <AssociationLine Name="errors" Type="MResolver.Engine.ModelParser.FormulaError" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.75" Y="7.125" />
+        <Point X="13.604" Y="7.125" />
+        <Point X="13.604" Y="9.48" />
+        <Point X="3" Y="9.48" />
+        <Point X="3" Y="8.017" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAMAAAAAAAAAAQAAAAEAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ModelParser\FormulaErrorSink.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="errors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MResolver.Engine.ModelParser.FormulaParseInfo">
+    <Position X="3" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAQAAQAgIAAAAAAAARAAAACAAAAAAAAA=</HashCode>
+      <FileName>Engine\ModelParser\FormulaParseInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AssignedVariable" />
+      <Property Name="Formula" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Errors" />
+      <Property Name="ResolvedVariableSpans" />
+      <Property Name="SourceVariables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MResolver.Engine.ModelParser.FormulaParser">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ModelParser\FormulaParser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="model_host" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MResolver.Engine.ModelParser.ResolvedVariableSpan">
+    <Position X="7" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Engine\ModelParser\ResolvedVariableSpan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+      <Property Name="Variable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MResolver.Models.Formula">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAIAAQAAAgAAAAAAAgACAIAAAA=</HashCode>
+      <FileName>Models\Formulas\Formula.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.288" />
+  </Class>
+  <Class Name="MResolver.Engine.ModelHost" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAEAAABAAAAAAAAAAAAAAAgAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Engine\ModelHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="Microsoft.Scripting.SourceSpan" Collapsed="true">
+    <Position X="6.75" Y="8" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Interface Name="MResolver.Models.IModelVariable">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Variables\IModelVariable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

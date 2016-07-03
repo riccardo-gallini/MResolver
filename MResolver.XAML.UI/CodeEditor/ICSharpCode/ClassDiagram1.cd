@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ICSharpCode.SharpDevelop.Bookmarks.BookmarkBase" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAQEAAAAQAEAAAEIIAAADBAIAEBACAABQAEBBAAA=</HashCode>
+      <FileName>CodeEditor\ICSharpCode\BookmarkBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ICSharpCode.AvalonEdit.AddIn.IconBarManager" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIBAAAAAQAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>CodeEditor\ICSharpCode\IconBarManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bookmarks" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ICSharpCode.AvalonEdit.AddIn.IconBarMargin" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABEgAAAgCAAAAiCAAAACAAEEBAAAAEAIAAAIAJCEAA=</HashCode>
+      <FileName>CodeEditor\ICSharpCode\IconBarMargin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="manager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ICSharpCode.SharpDevelop.Bookmarks.IBookmarkMargin">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>CodeEditor\ICSharpCode\IBookmarkMargin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bookmarks" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="ICSharpCode.SharpDevelop.Bookmarks.IBookmark">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAEAAAAAIAAAAAAAAEBAAAAAQAEAAAAA=</HashCode>
+      <FileName>CodeEditor\ICSharpCode\IBookmarkMargin.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
